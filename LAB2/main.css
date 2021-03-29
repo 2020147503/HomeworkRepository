@@ -1,0 +1,25 @@
+
+
+a         { color:black;}
+h1        { font-family: 'Lobster', cursive;
+            font-size: xx-large;}
+
+.current  { border-top-style: solid;
+            border-bottom-style: solid;
+            border-color: red; }
+
+.signup   { background-color: greenyellow;
+            margin: 0%;
+            padding: 0%;
+            text-align: center;
+            width: 7em;
+            height: 2em;}
+.signup:hover { color: crimson;}
+            
+.cancle   { background-color: crimson;
+            margin: 0%;
+            padding: 0%;
+            text-align: center;
+            width: 7em;
+            height: 2em;}
+.cancle:hover { color: greenyellow;}
