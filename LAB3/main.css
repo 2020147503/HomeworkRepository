@@ -1,0 +1,61 @@
+
+
+a         { text-decoration: none;
+            color:black;}
+
+.scrollx  { overflow-x: hidden;}
+.title        { margin-left: 3px;
+                font-family: 'Lobster', cursive;
+                font-size: xx-large;}
+.movingtitle  { position: relative;
+                animation-name: moving;
+                animation-duration: 2s;}
+@keyframes moving {
+                from   {left: 1020px; top: 0px;}
+                to     {left: 0px; top: 0px;}
+            }
+
+.subtitle { border-bottom-style: groove;
+            padding-bottom: 3px;}
+
+.current  { border-top-style: solid;
+            border-bottom-style: solid;
+            border-color: red; }
+
+.signup   { background-color: greenyellow;
+            margin: 0%;
+            padding: 0%;
+            text-align: center;
+            width: 7em;
+            height: 2em;}
+.signup:hover { color: crimson;}
+            
+.cancle   { background-color: crimson;
+            margin: 0%;
+            padding: 0%;
+            text-align: center;
+            width: 7em;
+            height: 2em;}
+.cancle:hover { color: greenyellow;}
+
+.center   { display: flex;
+            justify-content: center;}
+
+.center > div { width: 1020px;}
+
+.items    { display: flex;
+            justify-content: center;}
+.items > div  { width: 300px;
+                height: 461px;
+                border-style: groove;}
+
+.item     { transition: transform 2s;
+            transform-origin: 0 0;}
+.item:hover   { transform: scale(5, 5);}
+
+.intro    { text-align: justify;
+            column-count: 2;
+            column-gap: 15px;
+            column-width: 400px;
+            column-rule-style: double;
+            column-rule-width: 3px;}
