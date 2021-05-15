@@ -1,0 +1,16 @@
+[
+  {
+    "postId": 1,
+    "name": "css3",
+    "price": 30,
+    "image": "imgs/css3_book.jpg",
+    "type": "css3"
+  },
+  {
+    "postId": 2,
+    "name": "html5",
+    "price": 300,
+    "image": "imgs/html5_book.jpg",
+    "type": "html5"
+  }
+]
