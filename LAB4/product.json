@@ -16,5 +16,59 @@
         "price": 500,
         "image": "imgs/JS_book.jpg",
         "type": "JS"
+    },
+    {
+        "name": "css3",
+        "price": 30,
+        "image": "imgs/css3_book.jpg",
+        "type": "css3"
+    },
+    {
+        "name": "html5",
+        "price": 300,
+        "image": "imgs/html5_book.jpg",
+        "type": "html5"
+    },
+    {
+        "name": "JS",
+        "price": 500,
+        "image": "imgs/JS_book.jpg",
+        "type": "JS"
+    },
+    {
+        "name": "css3",
+        "price": 30,
+        "image": "imgs/css3_book.jpg",
+        "type": "css3"
+    },
+    {
+        "name": "html5",
+        "price": 300,
+        "image": "imgs/html5_book.jpg",
+        "type": "html5"
+    },
+    {
+        "name": "JS",
+        "price": 500,
+        "image": "imgs/JS_book.jpg",
+        "type": "JS"
+    },
+    {
+        "name": "css3",
+        "price": 30,
+        "image": "imgs/css3_book.jpg",
+        "type": "css3"
+    },
+    {
+        "name": "html5",
+        "price": 300,
+        "image": "imgs/html5_book.jpg",
+        "type": "html5"
+    },
+    {
+        "name": "JS",
+        "price": 500,
+        "image": "imgs/JS_book.jpg",
+        "type": "JS"
     }
 ]
