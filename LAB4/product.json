@@ -1,18 +1,18 @@
 [
     {
-        "name": "css3",
+        "name": "웹디자이너를 위한 CSS3",
         "price": 30,
         "image": "imgs/css3_book.jpg",
         "type": "css3"
     },
     {
-        "name": "html5",
+        "name": "웹디자이너를 위한 HTML5",
         "price": 300,
         "image": "imgs/html5_book.jpg",
         "type": "html5"
     },
     {
-        "name": "JS",
+        "name": "몰입! 자바스크립트 JavaScript",
         "price": 500,
         "image": "imgs/JS_book.jpg",
         "type": "JS"
