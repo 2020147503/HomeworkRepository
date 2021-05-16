@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <title>main page</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <script>
+        let counter = 0
+        let category = "All";
+        let searchTerm = "";
+        let products;
+
+        fetch("https://2020147503.github.io/HomeworkRepository/LAB4/product.json")
+            .then(response => response.json())
+            .then(json => { products = json; })
+            .then(foo => { load(); })
+            .catch(err => { console.log(err) });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("filter").addEventListener("click", setSearchOption, false);
+        });
+
+        window.onscroll = () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight)
+                load();
+        }
+
+        function load() {
+            let loadCount = 4;
+
+            while (loadCount > 0 && counter < products.length) {
+                if ((category == "All" || products[counter].type.includes(category)) && products[counter].name.includes(searchTerm)) {
+                    appendItem(products[counter]);
+                    loadCount--;
+                }
+                counter++;
+            }
+        }
+
+        function appendItem(product) {
+            let divNode = document.createElement("div");
+            let imgNode = document.createElement("img");
+            let infoBoxNode = document.createElement("button");
+            let nameNode = document.createElement("div");
+            let priceNode = document.createElement("div");
+            let priceTextNode = document.createElement("p");
+
+            divNode.appendChild(infoBoxNode);
+            divNode.appendChild(nameNode);
+            divNode.appendChild(imgNode);
+            divNode.appendChild(priceNode);
+
+            imgNode.src = product.image;
+            imgNode.alt = product.name + " image";
+
+            infoBoxNode.classList.add("infobox");
+            infoBoxNode.innerText = "more information";
+            infoBoxNode.addEventListener("click", moreInfo, false);
+
+            nameNode.classList.add("itemname");
+            nameNode.innerText = product.name;
+
+            priceNode.classList.add("itemprice");
+            priceNode.appendChild(priceTextNode);
+            priceTextNode.innerText = product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "\nKRW";
+
+            document.getElementById("item").appendChild(divNode);
+        }
+
+        function moreInfo() {
+            let nodes = this.parentNode.childNodes;
+            nodes[0].style.display = "none";
+            nodes[1].style.display = "block";
+            nodes[2].style.height = "60%";
+            nodes[3].style.display = "block";
+        }
+
+        function setSearchOption() {
+            category = document.getElementById("cat").value;
+            searchTerm = document.getElementById("searchTerm").value;
+            counter = 0;
+            clearItem();
+            load();
+        }
+
+        function clearItem() {
+            let items = document.getElementById("item");
+            while (items.hasChildNodes())
+                items.removeChild(items.firstChild);
+        }
+    </script>
+</head>
+
+<body class="border">
+    <header id="intro" class="border">
+        <h1 class="title">Welcome to Internet-programming Shop</h1>
+        <p class="sub">
+            <a class="current" href="index.html">메인페이지</a>
+            <a href="login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+        </p>
+    </header>
+    <div id="box">
+        <div id="search" class="border">
+            <form>
+                <div>
+                    <label>Choose a category:</label>
+                    <select id="cat">
+                        <option selected>All</option>
+                        <option>css3</option>
+                        <option>html5</option>
+                        <option>JS</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Enter search term:</label>
+                    <input type="text" id="searchTerm" placeholder="e.g. html">
+                </div>
+                <div>
+                    <button id="filter" type="button">Filter results</button>
+                </div>
+            </form>
+        </div>
+        <div id="item" class="border"></div>
+    </div>
+</body>
+
+</html>
