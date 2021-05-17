@@ -31,7 +31,7 @@
         }
 
         function load() {
-            let loadCount = 4;
+            let loadCount = 6;
 
             while (loadCount > 0 && counter < products.length) {
                 if ((category == "All" || products[counter].type.includes(category)) && products[counter].name.includes(searchTerm)) {
@@ -76,7 +76,7 @@
             let nodes = this.parentNode.childNodes;
             nodes[0].style.display = "none";
             nodes[1].style.display = "block";
-            nodes[2].style.height = "60%";
+            nodes[2].style.height = "55%";
             nodes[3].style.display = "block";
         }
 
@@ -99,7 +99,7 @@
 <body class="border">
     <header id="intro" class="border">
         <h1 class="title">Welcome to Internet-programming Shop</h1>
-        <p class="sub">
+        <p>
             <a class="current" href="index.html">메인페이지</a>
             <a href="login.html">로그인</a>
             <a href="signup.html">회원가입</a>
@@ -112,8 +112,8 @@
                     <label>Choose a category:</label>
                     <select id="cat">
                         <option selected>All</option>
-                        <option>css3</option>
                         <option>html5</option>
+                        <option>css3</option>
                         <option>JS</option>
                     </select>
                 </div>

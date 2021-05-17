@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 
-<body class="center">
+<body class="border">
 
-    <div class="border">
+    <header id="intro" class="border">
 
         <h1 class="title">Welcome to Internet-programming Shop</h1>
         <p>
@@ -18,51 +18,53 @@
             <a href="login.html">로그인</a>
             <a class="current" href="signup.html">회원가입</a>
         </p>
-        <hr>
-        <div class="main">
-            <form method="post">
-                <p>개인정보 (필수)</p>
-                <p>
-                    <label>이름:
-                        <input type="text" placeholder="이름을 입력하세요" autofocus required />
-                    </label>
-                </p>
-                <p>
-                    <label>생일:
-                        <input type="date" required />
-                    </label>
-                </p>
-                <p>
-                    <label>학년:
-                        <input type="number" min="1" max="4" step="1" required />
-                    </label>
-                </p>
-                <p>
-                    <label>전화번호:
-                        <input type="tel" placeholder="(###)####-####" pattern="\(\d{3}\)\d{4}-\d{4}" required />
-                    </label>
-                </p>
-                <p>
-                    <label>유저 아이디:
-                        <input type=text placeholder="아이디를 입력하세요" autocomplete="email" required />
-                    </label>
-                </p>
-                <p>
-                    <label>비밀번호:
-                        <input type="password" placeholder="비밀번호를 입력하세요" required />
-                    </label>
-                </p>
-                <p>
-                    <label>비밀번호 확인:
-                        <input type="password" placeholder="비밀번호 확인" required />
-                    </label>
-                </p>
+    </header>
+
+    <div class="border">
+        <form method="post">
+            <div>개인정보 (필수)</div>
+            <div>
+                <label>이름:
+                    <input type="text" placeholder="이름을 입력하세요" autofocus required />
+                </label>
+            </div>
+            <div>
+                <label>생일:
+                    <input type="date" required />
+                </label>
+            </div>
+            <div>
+                <label>학년:
+                    <input type="number" min="1" max="4" step="1" required />
+                </label>
+            </div>
+            <div>
+                <label>전화번호:
+                    <input type="tel" placeholder="(###)####-####" pattern="\(\d{3}\)\d{4}-\d{4}" required />
+                </label>
+            </div>
+            <div>
+                <label>유저 아이디:
+                    <input type=text placeholder="아이디를 입력하세요" autocomplete="email" required />
+                </label>
+            </div>
+            <div>
+                <label>비밀번호:
+                    <input type="password" placeholder="비밀번호를 입력하세요" required />
+                </label>
+            </div>
+            <div>
+                <label>비밀번호 확인:
+                    <input type="password" placeholder="비밀번호 확인" required />
+                </label>
+            </div>
+            <div>
                 <input class="signup" type="submit" value="Singup">
                 <input class="cancle" type="reset" value="Cancle">
-                <hr>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
+
 
 </body>
 
