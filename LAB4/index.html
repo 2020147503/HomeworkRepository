@@ -17,8 +17,10 @@
 
         fetch("https://2020147503.github.io/HomeworkRepository/LAB4/product.json")
             .then(response => response.json())
-            .then(json => { products = json; })
-            .then(foo => { load(); })
+            .then(json => {
+                products = json;
+                init();
+            })
             .catch(err => { console.log(err) });
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -31,7 +33,7 @@
         }
 
         function load() {
-            let loadCount = 6;
+            let loadCount = 4;
 
             while (loadCount > 0 && counter < products.length) {
                 if ((category == "All" || products[counter].type.includes(category)) && products[counter].name.includes(searchTerm)) {
@@ -40,6 +42,11 @@
                 }
                 counter++;
             }
+        }
+
+        function init() {
+            while (document.body.offsetHeight < window.innerHeight)
+                load();
         }
 
         function appendItem(product) {
@@ -85,7 +92,7 @@
             searchTerm = document.getElementById("searchTerm").value;
             counter = 0;
             clearItem();
-            load();
+            init();
         }
 
         function clearItem() {
